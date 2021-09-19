@@ -2,13 +2,14 @@ import React from "react";
 import './Header.css';
 import Logo from "../img/cappacitaLogo.png"
 
-export default ()=>{
+export default ({black})=>{
 
+    console.log(black)
 
 
     return(
         
-        <header>
+        <header className={black ? "header_black" : ""}>
             <div className="logo">
                 <a href="/">
                     <img src={Logo} alt="logo-cappacita"/>

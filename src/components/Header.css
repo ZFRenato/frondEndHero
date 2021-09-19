@@ -8,7 +8,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 30px 0 30px;
+    background: transparent;
+    transition: ease all 0.2s;
 }
+
+.header_black{
+    background-color: #462963;
+}
+
 
 .logo{
     height: 30px;
@@ -16,4 +24,13 @@ header {
 
 .logo img{
     height: 100%;
+}
+.user span{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.user a{
+    text-decoration: none;
 }

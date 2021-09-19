@@ -1,11 +1,17 @@
 import React from "react";
-import './ProdutionList.css';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
+import './ProdutionList.css';
 export default ({title, items})=>{
 
     return(
         <div className="prodution_row">
             <h2>{title}</h2>
+            <div className="navigation-left">
+            </div>
+            <div className="navigation-right">
+            </div>
             <div className="list_area">
                 <div className="list">                     
                      {items.list.results.length > 0 && items.list.results.map((element, key)=>(
