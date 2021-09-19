@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import cappacitaList from "./api/cappacitaList";
+import ProdutionList from "./components/ProdutionList";
+import './App.css'
 
-function App() {
+export default () => {
+  const [prodution, setProdution] = useState([]);
+
+  useEffect(()=>{
+    const loadList = async ()=>{
+        let lista = await cappacitaList.getListHome();
+        setProdution(lista)
+    }
+    loadList();
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pageHome" >
+        {prodution.map((element, key)=>(
+          <ProdutionList key={key} title={element.title} items={element.items}/>
+        ))}
     </div>
-  );
+  )
 }
-
-export default App;
