@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import cappacitaList from "./api/cappacitaList";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import "./components/FontawsomeIcons";
+import Loading from "./img/loading.gif";
 import Footer from "./components/Footer";
 import ProdutionList from "./components/ProdutionList";
 import './App.css'
@@ -46,7 +48,16 @@ export default () => {
            ))}
         </section>
         
-        <Footer/>     
+        <Footer/>
+
+
+        {prodution.length <= 0 && 
+        
+         <div className="loading">
+            <img src={Loading} alt="loading"/>
+         </div> 
+        
+        }        
     </div>
   )
 }

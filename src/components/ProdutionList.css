@@ -12,7 +12,7 @@
 }
 
 .list{
-    width: 999999999px;
+    transition: ease all 0.4s;
 }
 
 .item{
@@ -29,4 +29,33 @@
 
 .item img:hover{
     transform: scale(1);
+}
+
+.navigation-left,
+.navigation-right{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color:rgba(0,0,0,0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: ease all 0.3s;
+    opacity: 0;
+}
+
+.navigation-lef{
+    left: 0;
+}
+
+.navigation-right{
+    right: 0;
+}
+
+.prodution_row:hover .navigation-left,
+.prodution_row:hover .navigation-right{
+    opacity: 1;
 }
