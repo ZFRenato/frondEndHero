@@ -1,0 +1,21 @@
+.hero{
+   height: 100vh; 
+   background-size: cover;
+   background-position: center;
+   background-image: url('../img/pipoca-cinema-m.png');
+
+}
+
+
+.hero_h{
+    height: inherit;
+    width: inherit;
+    background: linear-gradient(to top, #764ba2 10%, transparent 90%);
+}
+
+.hero_text{
+    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: bold;
+    padding: 120px 0px 0px 40px;
+}
+

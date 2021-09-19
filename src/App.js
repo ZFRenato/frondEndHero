@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cappacitaList from "./api/cappacitaList";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 import ProdutionList from "./components/ProdutionList";
 import './App.css'
 
@@ -17,9 +19,15 @@ export default () => {
 
   return (
     <div className="pageHome" >
-        {prodution.map((element, key)=>(
-          <ProdutionList key={key} title={element.title} items={element.items}/>
-        ))}
+        <Header/>
+
+        <Hero/>
+
+        <section className="list_produtions">
+           {prodution.map((element, key)=>(
+              <ProdutionList key={key} title={element.title} items={element.items}/>
+           ))}
+        </section>        
     </div>
   )
 }
