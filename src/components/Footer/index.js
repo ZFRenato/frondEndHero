@@ -1,9 +1,7 @@
 import React from "react";
-import './Footer.css';
+import './style.css';
 
-export default ()=>{
-
-
+const Footer = ()=>{
     return(
         <footer>
             <div>Projeto Realizado Por Renato Carlos</div>
@@ -13,3 +11,5 @@ export default ()=>{
         </footer>
     )
 }
+
+export default Footer

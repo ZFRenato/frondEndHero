@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import './ProdutionList.css';
-export default ({title, items})=>{
+import ItemProdution from "../ItemProdution";
+import './style.css';
 
-    const [scrollX, setScroolX] = useState(-400)
+const Produtions = ({title, items})=>{
+
+    const [scrollX, setScroolX] = useState(0);
+
+    const goPageDetalhes = (id, type)=>{
+        
+    }
 
     const leftArrow = ()=>{
         let x = scrollX + Math.round(window.innerWidth / 2);
@@ -42,12 +48,13 @@ export default ({title, items})=>{
                     width: items.list.results.length * 150
                  }}>                     
                      {items.list.results.length > 0 && items.list.results.map((element, key)=>(
-                         <div className="item" key={key}> 
-                                <img src={`https://image.tmdb.org/t/p/w300${element.poster_path}`} alt={element.original_name}/>
-                         </div>                        
+                         <ItemProdution element={element} type={items.type} key={key}/>                    
                      ))}    
                 </div>               
             </div>
         </div>
     );
-}
+
+};
+
+export default Produtions;

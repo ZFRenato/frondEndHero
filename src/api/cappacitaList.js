@@ -14,7 +14,18 @@ const getListFetch = async (type, genre) =>{
 
     const json = await req.json();
     return json; 
+};
+
+const getProdutionFetch = async (id, type) =>{
+    
+    const req = await fetch(`${apiCappacita.prod}/${id}/${type}`, {
+        method: 'GET',
+    });
+
+    const json = await req.json();
+    return json; 
 }
+
 
 
 
@@ -47,5 +58,13 @@ export default {
                 items: await getListFetch("movie", 878)
             },
         ];
+    },
+
+    getProdution: async (id, type)=>{
+        return [
+            {
+                item: await getProdutionFetch(id, type)
+            }
+        ]
     }
 }

@@ -1,10 +1,8 @@
 import React from "react";
-import './Hero.css';
-
-export default ()=>{
+import './style.css';
 
 
-
+const Hero = ()=>{
 
     return (
         <section className="hero" >
@@ -19,4 +17,8 @@ export default ()=>{
             
         </section>
     )
+
+
 }
+
+export default Hero;

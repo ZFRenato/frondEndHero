@@ -1,11 +1,9 @@
 import React from "react";
-import './Header.css';
-import Logo from "../img/cappacitaLogo.png"
+import './style.css';
+import Logo from "../../img/cappacitaLogo.png"
 
-export default ({black})=>{
 
-    console.log(black)
-
+const Header = ({black})=>{
 
     return(
         
@@ -23,4 +21,7 @@ export default ({black})=>{
         </header>
 
     )
+
 }
+
+export default Header
