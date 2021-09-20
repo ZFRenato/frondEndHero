@@ -38,9 +38,19 @@ const Detalhes = ()=>{
             <div className="hero_h"> 
                 <div className="hero_text">
                     {prodution !== undefined &&
-                        <div>{console.log(prodution[0].item.list.id)}
-                            {prodution[0].item.list.original_title}
-                        </div>
+                        <>
+                            <div className="titulo">
+                                 {prodution[0].item.list.name || prodution[0].item.list.title}
+                             </div>
+                             <div className="info">
+                                 <div className="point">
+                                     {prodution[0].item.list.vote_average} nota  
+                                 </div>
+                                 <div className="descricao">
+                                     {prodution[0].item.list.overview}
+                                 </div>
+                             </div>
+                        </>
                         
                     }
                 </div>                           
